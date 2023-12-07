@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box {
+    width: 400px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    animation: boxfade 1s ease 0.5s both;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.centered-text {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.url-icon {
+    font-size: 30px; 
+    margin-left: 1px; 
+}
+
+.content {
+    border: 2px solid white;
+    width: 85%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.input {
+    border: none;
+    width: 70%;
+    font-size: 17px;
+    color: white;
+    background: transparent;
+}
+
+.btn {
+    border: none;
+    font-size: 17px;
+    padding: 3px 7px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(255, 127, 127);
+    margin-right: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 127, 127);
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-text:hover {
+    color: rgb(255, 127, 127);
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+@keyframes boxfade {
+    0% {opacity: 0; transform: scale(0.8);}
+    100% {opacity: 1; transform: scale(1);}
+}
